@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+echo -n "Enter your email and press [ENTER]: "
+read email
+
+echo -n "Enter your name and press [ENTER]: "
+read name
+
+git config --global user.email "$email"
+git config --global user.name "$name"
+
 brew cask install slack
 brew cask install authy
 brew cask install iterm2

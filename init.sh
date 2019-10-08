@@ -101,3 +101,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+
+# Spaces
+defaults write com.apple.dock mru-spaces -bool false
+

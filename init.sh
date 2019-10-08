@@ -21,6 +21,7 @@ brew cask install sequel-pro
 brew cask install visual-studio-code
 brew cask install zoomus
 brew cask install licecap
+brew cask install 1password
 
 chmod 0600 ~/.ssh/id_rsa
 

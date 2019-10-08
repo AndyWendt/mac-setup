@@ -77,3 +77,27 @@ ENABLE='{
 
 sudo defaults write $CORE_BRIGHTNESS "CBUser-0" "$ENABLE"
 sudo defaults write $CORE_BRIGHTNESS "CBUser-$(dscl . -read $HOME GeneratedUID | sed 's/GeneratedUID: //')" "$ENABLE"
+
+
+# Menu bar: Add Bluetooth, AirPort (WiFi), Battery
+defaults write com.apple.systemuiserver menuExtras -array \
+	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
+	"/System/Library/CoreServices/Menu Extras/Volume.menu"
+
+# https://github.com/bramus/freshinstall/blob/master/steps/1.macos-settings.sh
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
+
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
+
+
+# Set Lock Message to show on login screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "Found me? Shoot a mail to $email to return me. Thanks."
+
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+

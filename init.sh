@@ -20,6 +20,7 @@ brew cask install jetbrains-toolbox
 brew cask install sequel-pro
 brew cask install visual-studio-code
 brew cask install zoomus
+brew cask install licecap
 
 chmod 0600 ~/.ssh/id_rsa
 

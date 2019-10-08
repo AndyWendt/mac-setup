@@ -86,10 +86,10 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Volume.menu"
 
 # https://github.com/bramus/freshinstall/blob/master/steps/1.macos-settings.sh
-defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"; killall SystemUIServer
 
 # Show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent -bool true
+defaults write com.apple.menuextra.battery ShowPercent -bool true; killall SystemUIServer
 
 
 

@@ -15,6 +15,7 @@ brew cask install iterm2
 brew cask install jetbrains-toolbox
 brew cask install sequel-pro
 brew cask install visual-studio-code
+brew cask install zoomus
 
 chmod 0600 ~/.ssh/id_rsa
 
@@ -50,3 +51,29 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.touchbar.agent PresentationModeGlobal functionKeys; sudo pkill TouchBarServer
 
 defaults write com.apple.loginwindow LoginHook `pwd`/keymappings.sh
+
+
+# Enable Night Shift
+# https://github.com/LukeChannings/.config/blob/master/install.macos#L418-L438
+
+CORE_BRIGHTNESS="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
+
+ENABLE='{
+  CBBlueReductionStatus =     {
+    AutoBlueReductionEnabled = 1;
+    BlueLightReductionDisableScheduleAlertCounter = 3;
+    BlueLightReductionSchedule =         {
+      DayStartHour = 7;
+      DayStartMinute = 0;
+      NightStartHour = 7;
+      NightStartMinute = 1;
+    };
+    BlueReductionEnabled = 0;
+    BlueReductionMode = 1;
+    BlueReductionSunScheduleAllowed = 1;
+    Version = 1;
+  };
+}'
+
+sudo defaults write $CORE_BRIGHTNESS "CBUser-0" "$ENABLE"
+sudo defaults write $CORE_BRIGHTNESS "CBUser-$(dscl . -read $HOME GeneratedUID | sed 's/GeneratedUID: //')" "$ENABLE"

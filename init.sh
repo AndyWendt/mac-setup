@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 echo -n "Enter your email and press [ENTER]: "
 read email
@@ -44,4 +44,4 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # set touchbar default to FKeys
 defaults write com.apple.touchbar.agent PresentationModeGlobal functionKeys; sudo pkill TouchBarServer
 
-
+defaults write com.apple.loginwindow LoginHook `pwd`/keymappings.sh

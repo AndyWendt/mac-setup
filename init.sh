@@ -18,9 +18,14 @@ brew cask install visual-studio-code
 
 chmod 0600 ~/.ssh/id_rsa
 
+# dock: left, autohide, and quick reappear
 defaults write com.apple.dock orientation -string left && killall Dock
 defaults write com.apple.dock autohide-delay -float 0; killall Dock
+defaults write com.apple.dock autohide -bool true; killall Dock
+
+# Remove all of the stupid default apps they leave in the dock
 defaults write com.apple.dock persistent-apps -array
+
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Disable Resume system-wide

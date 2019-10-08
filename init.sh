@@ -6,9 +6,13 @@ read email
 echo -n "Enter your name and press [ENTER]: "
 read name
 
+# Git
 git config --global user.email "$email"
 git config --global user.name "$name"
 
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Install cask apps 
 brew cask install slack
 brew cask install authy
 brew cask install iterm2
@@ -86,6 +90,7 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Volume.menu"
 
 # https://github.com/bramus/freshinstall/blob/master/steps/1.macos-settings.sh
+# https://www.tech-otaku.com/mac/setting-the-date-and-time-format-for-the-macos-menu-bar-clock-using-terminal/
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"; killall SystemUIServer
 
 # Show battery percentage

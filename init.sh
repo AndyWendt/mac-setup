@@ -22,6 +22,7 @@ brew cask install visual-studio-code
 brew cask install zoomus
 brew cask install licecap
 brew cask install 1password
+brew cask install simplenote
 
 chmod 0600 ~/.ssh/id_rsa
 

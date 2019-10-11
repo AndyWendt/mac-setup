@@ -1,0 +1,20 @@
+---
+
+- name: install cask apps
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  register: apps_installed
+  loop:
+    - slack
+    - authy
+    - iterm2
+    - jetbrains-toolbox
+    - sequel-pro
+    - visual-studio-code
+    - zoomus
+    - licecap
+    - 1password
+    - simplenote
+    - veracrypt
+    - alacritty

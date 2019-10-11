@@ -1,5 +1,15 @@
 ---
+
 - hosts: localhost
+  vars_prompt:
+    - name: full_name
+      prompt: "What is your full name?"
+      private: no
+
+    - name: email
+      prompt: "What is your email?"
+      private: no
+
   roles:
     - {role: apps, tags: ["apps"]}
     - {role: git_config, tags: ["git"]}

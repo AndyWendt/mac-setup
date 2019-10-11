@@ -13,17 +13,7 @@ git config --global user.name "$name"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Install cask apps 
-brew cask install slack
-brew cask install authy
-brew cask install iterm2
-brew cask install jetbrains-toolbox
-brew cask install sequel-pro
-brew cask install visual-studio-code
-brew cask install zoomus
-brew cask install licecap
-brew cask install 1password
-brew cask install simplenote
-brew cask install veracrypt
+./app_installs.sh
 
 chmod 0600 ~/.ssh/id_rsa
 
@@ -113,4 +103,9 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Don't trade spaces
 defaults write com.apple.dock mru-spaces -bool false
+
+
+# Change shell
+
+chsh -s /usr/local/bin/fish
 

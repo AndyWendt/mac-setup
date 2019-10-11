@@ -65,17 +65,16 @@ sudo defaults write $CORE_BRIGHTNESS "CBUser-$(dscl . -read $HOME GeneratedUID |
 
 
 # Menu bar: Add Bluetooth, AirPort (WiFi), Battery
-defaults write com.apple.systemuiserver menuExtras -array \
-	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
-	"/System/Library/CoreServices/Menu Extras/Volume.menu"
+# defaults write com.apple.systemuiserver menuExtras -array \
+# 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+# 	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
+# 	"/System/Library/CoreServices/Menu Extras/Volume.menu"
 
-# https://github.com/bramus/freshinstall/blob/master/steps/1.macos-settings.sh
-# https://www.tech-otaku.com/mac/setting-the-date-and-time-format-for-the-macos-menu-bar-clock-using-terminal/
-defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"; killall SystemUIServer
+
+# defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"; killall SystemUIServer
 
 # Show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent -bool true; killall SystemUIServer
+# defaults write com.apple.menuextra.battery ShowPercent -bool true; killall SystemUIServer
 
 
 

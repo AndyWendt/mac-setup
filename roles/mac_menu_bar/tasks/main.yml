@@ -1,0 +1,27 @@
+---
+
+- name: Set menubar items
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    key: menuExtras
+    type: array
+    value:
+      - "/System/Library/CoreServices/Menu Extras/AirPort.menu"
+      - "/System/Library/CoreServices/Menu Extras/Battery.menu"
+      - "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
+# https://github.com/bramus/freshinstall/blob/master/steps/1.macos-settings.sh
+# https://www.tech-otaku.com/mac/setting-the-date-and-time-format-for-the-macos-menu-bar-clock-using-terminal/
+- name: Set clock date format
+  osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: "EEE d MMM HH:mm"
+
+- name: Set battery percentage
+  osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: ShowPercent
+    type: bool
+    value: true

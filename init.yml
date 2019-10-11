@@ -19,6 +19,7 @@
   roles:
     - { role: apps, tags: ["apps"] }
     - { role: mac_defaults, tags: ["mac"] }
+    - { role: mac_dock, tags: ["mac"] }
     - { role: mac_keyboard, tags: ["mac"] }
     - { role: mac_menu_bar, tags: ["mac"] }
     - { role: git_config, tags: ["git"] }

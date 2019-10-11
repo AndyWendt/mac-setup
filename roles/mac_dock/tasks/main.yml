@@ -1,0 +1,29 @@
+---
+
+- name:  Set dock apps to an empty array
+  osx_defaults:
+    domain: com.apple.dock
+    key: persistent-apps
+    type: array
+    value:
+
+- name: Move the dock to the left side
+  osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: left
+
+- name: Show dock immediately on unhide
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide-delay
+    type: float
+    value: 0
+
+- name: Hide dock by default
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true

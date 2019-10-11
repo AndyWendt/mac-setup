@@ -1,0 +1,45 @@
+---
+
+- name: Turn off automatic capitialization
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticCapitalizationEnabled
+    type: bool
+    value: false
+
+- name: Turn off automatic dashing
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticDashSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Turn off automatic periods
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticPeriodSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Turn off automatic quoting
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticQuoteSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Turn off automatic spell correct
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticSpellingCorrectionEnabled
+    type: bool
+    value: false
+
+
+- name: Touchbar should show function keys
+  osx_defaults:
+    domain: com.apple.touchbar.agent
+    key: PresentationModeGlobal
+    value: functionKeys
+
+# defaults write com.apple.loginwindow LoginHook `pwd`/keymappings.sh

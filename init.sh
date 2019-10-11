@@ -80,7 +80,7 @@ defaults write com.apple.menuextra.battery ShowPercent -bool true; killall Syste
 
 
 # Set Lock Message to show on login screen
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "Found me? Shoot a mail to $email to return me. Thanks."
+# sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "Found me? Shoot a mail to $email to return me. Thanks."
 
 
 # Avoid creating .DS_Store files on network or USB volumes
@@ -89,7 +89,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 
 # Don't trade spaces
-defaults write com.apple.dock mru-spaces -bool false
+# defaults write com.apple.dock mru-spaces -bool false
 
 
 # Change shell

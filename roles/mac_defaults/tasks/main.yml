@@ -7,3 +7,11 @@
     type: string
     value: "Name: {{ full_name }} | Company: {{ company }} | Phone: {{ phone }} | Email: {{ email }}"
     state: present
+
+- name: Disable reordering of spaces automatically
+  osx_defaults:
+    domain: com.apple.dock
+    key: mru-spaces
+    type: bool
+    value: false
+    state: present

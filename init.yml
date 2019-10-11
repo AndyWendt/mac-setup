@@ -1,15 +1,22 @@
 ---
 
 - hosts: localhost
+  vars: 
+    company: Mavenlink
   vars_prompt:
     - name: full_name
-      prompt: "What is your full name?"
+      prompt: "Full name:"
       private: no
 
     - name: email
-      prompt: "What is your email?"
+      prompt: "Email:"
+      private: no
+    
+    - name: phone
+      prompt: "Phone:"
       private: no
 
   roles:
-    - {role: apps, tags: ["apps"]}
-    - {role: git_config, tags: ["git"]}
+    - { role: apps, tags: ["apps"] }
+    - { role: mac_defaults, tags: ["mac"] }
+    - { role: git_config, tags: ["git"] }

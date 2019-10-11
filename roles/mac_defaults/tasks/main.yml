@@ -1,0 +1,9 @@
+---
+
+- name: Set Login Window Text
+  osx_defaults:
+    domain: com.apple.loginwindow
+    key: LoginwindowText
+    type: string
+    value: "Name: {{ full_name }} | Company: {{ company }} | Phone: {{ phone }} | Email: {{ email }}"
+    state: present

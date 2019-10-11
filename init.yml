@@ -2,3 +2,4 @@
 - hosts: localhost
   roles:
     - {role: apps, tags: ["apps"]}
+    - {role: git_config, tags: ["git"]}

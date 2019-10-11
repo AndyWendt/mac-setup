@@ -1,6 +1,6 @@
 ---
 
-- name: install cask apps
+- name: install gui apps
   homebrew_cask:
     name: "{{ item }}"
     state: present
@@ -18,3 +18,12 @@
     - simplenote
     - veracrypt
     - alacritty
+
+- name: install commandline apps
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  register: commandline_apps_installed
+  loop:
+    - fish
+  

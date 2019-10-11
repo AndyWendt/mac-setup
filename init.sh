@@ -1,19 +1,6 @@
 #!/bin/bash
 
-echo -n "Enter your email and press [ENTER]: "
-read email
-
-echo -n "Enter your name and press [ENTER]: "
-read name
-
-# Git
-git config --global user.email "$email"
-git config --global user.name "$name"
-
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-# Install cask apps 
-./app_installs.sh
+ansible-playbook ./init.yml
 
 chmod 0600 ~/.ssh/id_rsa
 

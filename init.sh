@@ -27,6 +27,7 @@ ENABLE='{
   };
 }'
 
+echo "Changing night shift settings"
 sudo defaults write $CORE_BRIGHTNESS "CBUser-0" "$ENABLE"
 sudo defaults write $CORE_BRIGHTNESS "CBUser-$(dscl . -read $HOME GeneratedUID | sed 's/GeneratedUID: //')" "$ENABLE"
 

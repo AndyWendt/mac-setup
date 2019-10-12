@@ -13,23 +13,20 @@
     key: mru-spaces
     type: bool
     value: false
-    state: present
 
-- name: Disable reordering of spaces automatically
+- name: Disable Syncing of documents to icloud
   osx_defaults:
     domain: NSGlobalDomain
     key: NSDocumentSaveNewDocumentsToCloud
     type: bool
     value: false
-    state: present
 
-- name: Disable reordering of spaces automatically
+- name: Disable quit always keep windows
   osx_defaults:
     domain: com.apple.systempreferences
     key: NSQuitAlwaysKeepsWindows
     type: bool
     value: false
-    state: present
 
 - name: Don't write DS store files to network shares
   osx_defaults:
@@ -37,7 +34,6 @@
     key: DSDontWriteNetworkStores
     type: bool
     value: true
-    state: present
 
 
 - name: Don't write DS store files to usb devices
@@ -46,7 +42,6 @@
     key: DSDontWriteUSBStores
     type: bool
     value: true
-    state: present
 
 - name: Set perms on ssh key
   file:

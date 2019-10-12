@@ -17,3 +17,19 @@
     state: present
 
 
+- name: Disable reordering of spaces automatically
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSDocumentSaveNewDocumentsToCloud
+    type: bool
+    value: false
+    state: present
+
+- name: Disable reordering of spaces automatically
+  osx_defaults:
+    domain: com.apple.systempreferences
+    key: NSQuitAlwaysKeepsWindows
+    type: bool
+    value: false
+    state: present
+

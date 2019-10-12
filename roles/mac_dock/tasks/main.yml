@@ -5,7 +5,7 @@
     domain: com.apple.dock
     key: persistent-apps
     type: array
-    value:
+    value: []
 
 - name: Move the dock to the left side
   osx_defaults:

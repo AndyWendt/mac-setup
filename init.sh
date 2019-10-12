@@ -2,7 +2,7 @@
 
 ansible-playbook ./init.yml
 
-chmod 0600 ~/.ssh/id_rsa
+# chmod 0600 ~/.ssh/id_rsa
 
 # dock: left, autohide, and quick reappear
 # defaults write com.apple.dock orientation -string left && killall Dock
@@ -93,5 +93,5 @@ sudo defaults write $CORE_BRIGHTNESS "CBUser-$(dscl . -read $HOME GeneratedUID |
 
 # Change shell
 
-chsh -s /usr/local/bin/fish
+# chsh -s /usr/local/bin/fish
 

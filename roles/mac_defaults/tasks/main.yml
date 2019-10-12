@@ -49,3 +49,11 @@
     type: bool
     value: true
     state: present
+
+- name: Set perms on ssh key
+  file:
+    path: ~/.ssh/id_rsa
+    mode: '0600'
+
+- name: Change the shell to something fishy
+  shell: chsh -s /usr/local/bin/fish

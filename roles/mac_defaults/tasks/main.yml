@@ -33,3 +33,19 @@
     value: false
     state: present
 
+- name: Don't write DS store files to network shares
+  osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+    state: present
+
+
+- name: Don't write DS store files to usb devices
+  osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteUSBStores
+    type: bool
+    value: true
+    state: present

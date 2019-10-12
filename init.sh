@@ -83,8 +83,8 @@ sudo defaults write $CORE_BRIGHTNESS "CBUser-$(dscl . -read $HOME GeneratedUID |
 
 
 # Avoid creating .DS_Store files on network or USB volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+# defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+# defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 
 # Don't trade spaces

@@ -5,7 +5,7 @@
     domain: com.apple.loginwindow
     key: LoginwindowText
     type: string
-    value: "Name {{ full_name }} Company {{ company }} Phone {{ phone }} Email {{ email }}"
+    value: "Name: {{ full_name }} | Company: {{ company }} | Phone: {{ phone }} | Email: {{ email }}"
 
 - name: Disable reordering of spaces automatically
   osx_defaults:

@@ -35,6 +35,9 @@ echo "Changing night shift settings"
 # sudo defaults write $CORE_BRIGHTNESS "CBUser-0" "$ENABLE"
 sudo defaults write $CORE_BRIGHTNESS "CBUser-$(dscl . -read $HOME GeneratedUID | sed 's/GeneratedUID: //')" "$ENABLE"
 
+echo "Installing Tuple"
+curl -L https://git.io/tuple-install | bash
+
 echo "Restarting the menubar"
 killall SystemUIServer
 

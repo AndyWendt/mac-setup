@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ansible-playbook ./init.yml
+ansible-playbook ./mac-playbook.yml
 
 # Enable Night Shift
 # https://github.com/LukeChannings/.config/blob/master/install.macos#L418-L438

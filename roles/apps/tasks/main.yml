@@ -19,6 +19,7 @@
     - veracrypt
     - alacritty
     - pomodone
+    - exercism
 
 - name: install commandline apps
   homebrew:

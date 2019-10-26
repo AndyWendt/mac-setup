@@ -19,6 +19,7 @@
     - veracrypt
     - alacritty
     - pomodone
+    - insomnia
 
 - name: install commandline apps
   homebrew:

@@ -29,4 +29,5 @@
   loop:
     - fish
     - exercism
+    - jq
   

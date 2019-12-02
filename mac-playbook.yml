@@ -18,6 +18,7 @@
 
   roles:
     - { role: apps, tags: ["apps"] }
+    - { role: flutter, tags: ["apps", "mobile"] }
     - { role: mac_defaults, tags: ["mac"] }
     - { role: mac_dock, tags: ["mac"] }
     - { role: mac_keyboard, tags: ["mac"] }

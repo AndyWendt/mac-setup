@@ -1,0 +1,39 @@
+---
+
+- name: check flutter exists
+  stat:
+    path: ~/development/flutter
+  register: flutter_directory
+
+- name: get flutter stable url
+  shell: |
+    curl 'https://storage.googleapis.com/flutter_infra/releases/releases_macos.json' -H 'Accept: application/json' --compressed | 
+    jq -r '.current_release.stable as $stable | .base_url as $base_url | .releases | map(select(.hash == $stable)) | .[0].archive as $stable_url | $base_url + "/" + $stable_url'
+  register: flutter_stable_url
+  when: not flutter_directory.stat.exists
+
+- name: Create a directory if it does not exist
+  file:
+    path: ~/development
+    state: directory
+  register: dev_directory
+  when: not flutter_directory.stat.exists 
+ 
+- name: Download flutter and install it
+  unarchive:
+    src: "{{ flutter_stable_url.stdout | trim }}" 
+    dest: ~/development
+    remote_src: yes
+  when: not flutter_directory.stat.exists 
+  register: flutter_installed
+
+
+- name: add flutter to path
+  lineinfile:
+    dest: ~/.bash_profile
+    state: present
+    line: >
+      export PATH="$PATH:~/development/flutter/bin"
+
+
+

@@ -1,5 +1,9 @@
 ---
 
+- homebrew_tap:
+    name: homebrew/cask-fonts
+    state: present
+
 - name: install gui apps
   homebrew_cask:
     name: "{{ item }}"
@@ -20,6 +24,7 @@
     - alacritty
     - pomodone
     - insomnia
+    - font-fira-code
 
 - name: install commandline apps
   homebrew:
@@ -30,4 +35,4 @@
     - fish
     - exercism
     - jq
-  
+

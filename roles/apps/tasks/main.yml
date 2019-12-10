@@ -24,7 +24,6 @@
     - alacritty
     - pomodone
     - insomnia
-    - github
 
 - name: install commandline apps
   homebrew:

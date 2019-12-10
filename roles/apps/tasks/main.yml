@@ -24,7 +24,7 @@
     - alacritty
     - pomodone
     - insomnia
-    - font-fira-code
+    - github
 
 - name: install commandline apps
   homebrew:

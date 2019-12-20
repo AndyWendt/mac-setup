@@ -24,6 +24,7 @@
     - alacritty
     - pomodone
     - insomnia
+    - balenaetcher
 
 - name: install commandline apps
   homebrew:

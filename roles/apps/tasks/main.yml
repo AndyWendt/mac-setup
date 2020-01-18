@@ -24,6 +24,7 @@
     - alacritty
     - pomodone
     - insomnia
+    - balenaetcher
     - chromedriver
 
 - name: install commandline apps

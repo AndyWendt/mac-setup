@@ -24,6 +24,7 @@
     - alacritty
     - pomodone
     - insomnia
+    - chromedriver
 
 - name: install commandline apps
   homebrew:

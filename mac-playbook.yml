@@ -1,7 +1,7 @@
 ---
 
 - hosts: localhost
-  vars: 
+  vars:
     company: Mavenlink
   vars_prompt:
     - name: full_name
@@ -11,7 +11,7 @@
     - name: email
       prompt: "Email:"
       private: no
-    
+
     - name: phone
       prompt: "Phone:"
       private: no
@@ -19,6 +19,7 @@
   roles:
     - { role: apps, tags: ["apps"] }
     - { role: flutter, tags: ["apps", "mobile"] }
+    - { role: gems, tags: ["apps"] }
     - { role: mac_defaults, tags: ["mac"] }
     - { role: mac_dock, tags: ["mac"] }
     - { role: mac_keyboard, tags: ["mac"] }

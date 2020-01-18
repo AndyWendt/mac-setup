@@ -1,0 +1,5 @@
+---
+
+- gem:
+    name: kimurai
+    state: latest

@@ -27,6 +27,7 @@
     - balenaetcher
     - chromedriver
     - brave-browser
+    - amazon-music
 
 - name: install commandline apps
   homebrew:

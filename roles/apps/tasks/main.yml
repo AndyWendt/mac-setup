@@ -26,6 +26,7 @@
     - insomnia
     - balenaetcher
     - chromedriver
+    - brave-browser
 
 - name: install commandline apps
   homebrew:

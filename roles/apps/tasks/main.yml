@@ -28,6 +28,7 @@
     - chromedriver
     - brave-browser
     - amazon-music
+    - lastpass
 
 - name: install commandline apps
   homebrew:
